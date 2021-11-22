@@ -40,6 +40,9 @@ router.get('/:id', (req, res) => {
       return;
     }
     res.json(dbCategoryData);
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
