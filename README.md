@@ -31,6 +31,7 @@
     Executing (default): CREATE TABLE IF NOT EXISTS `product_tag` (`id` INTEGER NOT NULL auto_increment , `product_id` INTEGER, `tag_id` INTEGER, UNIQUE `product_tag_tag_id_product_id_unique` (`product_id`, `tag_id`), PRIMARY KEY (`id`), FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
     Executing (default): SHOW INDEX FROM `product_tag`
     App listening on port 3001!
+    5. Connect to your newly created database. Use an pplication like Insomnia to open and manipulate the data in the database.
 
   ## Usage
 
