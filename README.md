@@ -3,7 +3,7 @@
   ![License](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
   ## Description
-  This application is a social network API.
+  This is a basic back end application that can be used to access and edit an e-commerce based database.
 
   ## Table of Contents
   - [Description](#description)
@@ -16,7 +16,10 @@
   - [Contact Info](#contact-info)
 
   ## Installation
-
+>* Download or clone the repository.
+>* Open repository on your favorite IDE.
+>* Create a new terminal on your IDE and enter node server.js.
+>* If the creation of the database is successful then you will get the following message: "App listening on port 3001!"
 
   ## Usage
 
