@@ -11,7 +11,9 @@ router.get('/', (req, res) => {
       },
       {
         model: Tag,
-        attributes: ['id', 'tag_name']
+        attributes: ['id', 'tag_name'],
+        through: ProductTag,
+        as: 'tagged_product'
       }
     ]
   }).then(dbProductData => res.json(dbProductData))
@@ -34,7 +36,9 @@ router.get('/:id', (req, res) => {
       },
       {
         model: Tag,
-        attributes: ['id', 'tag_name']
+        attributes: ['id', 'tag_name'],
+        through: ProductTag,
+        as: 'tagged_product'
       }
     ]
   }).then(dbProductData => {
@@ -50,13 +54,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  Product.create({
-    product_name: req.body.product_name,
-    price: req.body.price,
-    stock: req.body.stock,
-    category_id: req.body.category_id,
-    tagIds: req.body.tagsIds
-  })
+  Product.create({req.body})
     .then((product) => {
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
@@ -77,7 +75,8 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  Product.update(req.body, {
+  Product.update(req.body, 
+    {
     where: {
       id: req.params.id,
     },
