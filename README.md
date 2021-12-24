@@ -21,7 +21,7 @@
   3. Create a new terminal on your IDE and enter node server.js.
   4. If the creation of the database is successful then you will get the following output:
 
-  *'Executing (default): CREATE TABLE IF NOT EXISTS `category` (`id` INTEGER NOT NULL auto_increment , `category_name` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) 
+    * 'Executing (default): CREATE TABLE IF NOT EXISTS `category` (`id` INTEGER NOT NULL auto_increment , `category_name` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) 
 ENGINE=InnoDB;
 Executing (default): SHOW INDEX FROM `category`
 Executing (default): CREATE TABLE IF NOT EXISTS `product` (`id` INTEGER NOT NULL auto_increment , `product_name` VARCHAR(255) NOT NULL UNIQUE, `price` DECIMAL(10,2) NOT NULL, `stock` INTEGER NOT NULL, `category_id` INTEGER, `category__id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`category__id`) REFERENCES `category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;  
