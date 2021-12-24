@@ -19,11 +19,7 @@ Product.init(
     // Define product name column
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate:{
-        len: [1,255]
-      }
+      allowNull: false
     },
     // Define price column
     price: {
@@ -37,6 +33,7 @@ Product.init(
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
       validate:{
         isNumeric: true
       }
