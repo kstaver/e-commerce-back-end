@@ -40,10 +40,10 @@
   This project is covered under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
   ## Contribution
-
+  Please pay me. 😊 Just kidding (or am I!?)! You can contribute to this project by sending me an email about what you would like to add or fix.
 
   ## Testing
-
+  You can test this application by changing the database via GET/PUT/POST commands in Insomnia or a similar app to check for invalid entries.
 
   ## Questions
   You can find the link to my application [here](https://github.com/kstaver/e-commerce-back-end). If you have any questions pertaining to this project, please feel free to contact me.
