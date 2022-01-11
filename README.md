@@ -1,6 +1,6 @@
 # E-commerce Back End
 
-  ![License](https://www.apache.org/licenses/LICENSE-2.0.txt)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
   ## Description
   This is a basic back end application that can be used to access and edit an e-commerce based database.
