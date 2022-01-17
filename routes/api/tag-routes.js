@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Tag, Product, /*Category,*/ ProductTag } = require('../../models');
+const { Tag, Product, ProductTag } = require('../../models');
 
 router.get('/', (req, res) => {
   Tag.findAll({
@@ -11,12 +11,6 @@ router.get('/', (req, res) => {
         through: ProductTag,
         as: 'tagged_product'
       }
-      // {
-      //   model: Category,
-      //   attributes: ['category_id'],
-      //   through: ProductTag,
-      //   as: 'tagged_product'
-      // }
     ]
   }).then(dbTagData => res.json(dbTagData))
     .catch(err => {
