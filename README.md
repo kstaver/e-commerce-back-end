@@ -34,7 +34,7 @@
     5. Connect to your newly created database. Use an pplication like Insomnia to open and manipulate the data in the database.
 
   ## Usage
-
+  Check out my tutorial on how to use this application: (video of using the app).
 
   ## License
   This project is covered under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
@@ -46,7 +46,7 @@
   You can test this application by changing the database via GET/PUT/POST commands in Insomnia or a similar app to check for invalid entries.
 
   ## Questions
-  You can find the link to my application [here](https://github.com/kstaver/e-commerce-back-end). If you have any questions pertaining to this project, please feel free to contact me.
+  You can find this applciation's repository [here](https://github.com/kstaver/e-commerce-back-end). If you have any questions pertaining to this project, please feel free to contact me.
 
   ## Contact Info
   - Github: [kstaver](https://github.com/kstaver)
