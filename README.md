@@ -16,22 +16,27 @@
   - [Contact Info](#contact-info)
 
   ## Installation
-  1. Download or clone the repository.
-  2. Open repository on your favorite IDE.
-  3. Create a new terminal on your IDE and enter node server.js.
-  4. If the creation of the database is successful then you will get the following output:
+          // Install Dependencies
 
-    Executing (default): CREATE TABLE IF NOT EXISTS `category` (`id` INTEGER NOT NULL auto_increment , `category_name` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) 
-    ENGINE=InnoDB;
-    Executing (default): SHOW INDEX FROM `category`
-    Executing (default): CREATE TABLE IF NOT EXISTS `product` (`id` INTEGER NOT NULL auto_increment , `product_name` VARCHAR(255) NOT NULL UNIQUE, `price` DECIMAL(10,2) NOT NULL, `stock` INTEGER NOT NULL, `category_id` INTEGER, `category__id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`category__id`) REFERENCES `category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;  
-    Executing (default): SHOW INDEX FROM `product`
-    Executing (default): CREATE TABLE IF NOT EXISTS `tag` (`id` INTEGER NOT NULL auto_increment , `tag_name` VARCHAR(255), PRIMARY KEY (`id`)) ENGINE=InnoDB;     
-    Executing (default): SHOW INDEX FROM `tag`
-    Executing (default): CREATE TABLE IF NOT EXISTS `product_tag` (`id` INTEGER NOT NULL auto_increment , `product_id` INTEGER, `tag_id` INTEGER, UNIQUE `product_tag_tag_id_product_id_unique` (`product_id`, `tag_id`), PRIMARY KEY (`id`), FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
-    Executing (default): SHOW INDEX FROM `product_tag`
-    App listening on port 3001!
-    5. Connect to your newly created database. Use an pplication like Insomnia to open and manipulate the data in the database.
+  2. Install npm dependencies: ```npm i```
+  3. Create a ```.env``` file in the root folder. Put the following inside of your .env file:
+        ```DB_NAME='ecommerce_db'```
+          ```DB_USER='root'```
+          ```DB_PW='yourpasswordhere'```
+  4. enter the following into a MySQL shell to create the database:
+        ```SOURCE db/schema.sql```
+
+          //Run schema.sql in MySQL shell to created database
+
+          SOURCE db/schema.sql
+
+          //Start Server
+
+          npm start
+
+          //Seed Database
+
+          npm run seed
 
   ## Usage
   Check out my tutorial on how to use this application: (video of using the app).
