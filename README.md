@@ -16,30 +16,19 @@
   - [Contact Info](#contact-info)
 
   ## Installation
-          // Install Dependencies
-
-  2. Install npm dependencies: ```npm i```
-  3. Create a ```.env``` file in the root folder. Put the following inside of your .env file:
+  1. Fork the repo or download the files. Please do not edit the original repo.
+  2. Open up the files in your favorite IDE.
+  3. Install npm dependencies by entering ```npm i``` in a terminal.
+  4. Create a ```.env``` file in the root folder. Put the following inside of your .env file:
         ```DB_NAME='ecommerce_db'```
           ```DB_USER='root'```
           ```DB_PW='yourpasswordhere'```
-  4. enter the following into a MySQL shell to create the database:
-        ```SOURCE db/schema.sql```
-
-          //Run schema.sql in MySQL shell to created database
-
-          SOURCE db/schema.sql
-
-          //Start Server
-
-          npm start
-
-          //Seed Database
-
-          npm run seed
+  5. Enter the following into a MySQL shell to create the database: ```SOURCE db/schema.sql```.
+  6. Seed the database by entering ```npm run seed``
+  7. Start the server by entering ```npm start```.
 
   ## Usage
-  Check out my tutorial on how to use this application: (video of using the app).
+  Check out my tutorial on how to use this application: [E-Commerce Back End](https://youtu.be/qMW_gS18XV8).
 
   ## License
   This project is covered under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
